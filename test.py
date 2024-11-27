@@ -15,7 +15,8 @@ from langchain.chains.question_answering import load_qa_chain
 load_dotenv()
 
 # Configure API key
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+# GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+GOOGLE_API_KEY = st.secrets['GOOGLE_API_KEY']
 genai.configure(api_key=GOOGLE_API_KEY)
 
 # Define LLM
